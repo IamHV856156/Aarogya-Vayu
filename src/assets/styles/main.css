@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Meow+Script&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playwrite+AU+SA:wght@100..400&display=swap');
+
+body{
+    font-family: "Open Sans",sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom color for aqi categories */
+.bg-purpule-700{ background-color: #6b21a8;}
+.text-purpule-700{ color: #6b21a8;}
+
+/* responsive container for main content */
+.container{
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* basic responsive adjustments for small screen size */
+@media (max-width:680px){
+    .container{
+        padding-left: .5rem;
+        padding-right: 0.5rem;
+    }
+}

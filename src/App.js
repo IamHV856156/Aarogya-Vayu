@@ -14,7 +14,7 @@ function App() {
   const toggledarkmode =() =>{
     setdarkmode(prevMode => !prevMode);
   };
-  const [currentlocation, setcurrentlocation] = useState('');
+  const [currentlocation, setcurrentlocation] = useState('Loading....');
   const[aqidata, setaqidata] = useState(null);
 
    const handlesearch = useCallback((location) => {
@@ -31,14 +31,14 @@ function App() {
         so2: (Math.random() * 30).toFixed(1),
         o3: (Math.random() * 60).toFixed(1),
         co: (Math.random() * 5).toFixed(1),
-        lastUpdated: new Date().toLocaleString(),
+        lastUpdate: new Date().toLocaleString(),
       };
       setaqidata(simulateddata);
 
     }, 1000);
   },[setcurrentlocation,setaqidata]);
 
-const {locationLoading,latitude,longitude} = useGeolocation(handlesearch);
+const {locationLoading,latitude,longitude,} = useGeolocation(handlesearch);
    return (
    <div className={`min-h-screen bg-gray-100 dark:bg-gray-900 font-inter ${darkmode ? 'dark' : ''}`}>
       <Header darkmode={darkmode} toggledarkmode={toggledarkmode}/>

@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 const Header = ({darkmode, toggledarkmode}) =>{
     return (
         <header className="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-4 shadow-lg rounded-b-lg dark:from-gray-800 dark:to-gray-900 dark:shadow-xl transition-all duration-300">

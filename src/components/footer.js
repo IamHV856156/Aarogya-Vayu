@@ -1,6 +1,7 @@
 import React from "react";
 import Feadbackform from "./feedbackform";
-import applogo from "../assets/images/aarogya-vayu-logo.jpeg";
+import { motion } from "framer-motion";
+import applogo from "../assets/images/aarogya-vayu-logo.png";
 const Footer = () =>{
     const currentyear = new Date().getFullYear();
     return (
@@ -9,10 +10,16 @@ const Footer = () =>{
                 {/* top row */}
                 <div className="flex flex-col md:flex-row justify-between items-center mb-10 md:mb-12">
                     <div className="flex items-center justify-center md:justify-start mb-4">
-                        <div>
-                            <img src={applogo} alt="Aarogya Vayu Logo" className="w-20 h-20 md:w-20 md:h-20 rounded-full shadow-lg felx items-center justify-center mr-3 md:mr-4 glow-effect shadow-500/20"/>
-                        </div>
-                        <h1 className="text-3xl font-bold text-bule-200 dark:text-gray-100 font-inter hover:underline">Aarogya Vayu</h1>
+                        <motion.img
+                        src={applogo}
+                        alt="Aarogya Vayu Logo"  
+                        className="w-16 h-16 md:w-20 md:h-20 rounded-full shadow-lg felx items-center justify-center mr-3 md:mr-4 shadow-500/20 object-contain transition-all duration-400" 
+                        animate={{ opacity: 1, x: 0 }} 
+                        transition={{ duration: 0.4, ease: "easeOut", delay: 0.2 }} 
+                        whileHover={{ scale: 1.05, rotate: 4, boxShadow: "0 15px 25px -5px rgba(0, 0, 0, 0.4)" }} 
+                        whileTap={{ scale: 0.9 }}
+                        />
+                        <h1 className="text-3xl font-bold text-bule-200 dark:text-gray-100 font-inter ">Aarogya Vayu</h1>
                     </div>
                     <div className="mb-8 md:mb-0 text-center md:text-left">
                     <div className="flex flex-wrap justify-center gap-4 md:gap-6">

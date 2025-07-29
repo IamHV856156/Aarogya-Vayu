@@ -32,7 +32,7 @@ const MapView =({location ,latitude,longitude}) =>{
             if (marker.current) {
                 marker.current.setLatLng(coord);
             }else{
-                marker.current=L.marker(coord).addTo(mapcontainer.current).bindPopup(`<b>${location||'Your Location'}</b>`).openPopup();
+                marker.current=L.marker(coord).addTo(mapinstance.current).bindPopup(`<b>${location||'Your Location'}</b>`).openPopup();
             }
         }else{
             if (marker.current) {

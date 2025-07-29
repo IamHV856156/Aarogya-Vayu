@@ -14,9 +14,11 @@ const useGeolocation = (onLocationFound) => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         async (position) => {
-          setlatitude(position.coords.latitude);
-          setlatitude(position.coords.longitude);
-          console.log("Geolocation obtained: Lat:", position.coords.latitude, "Lon:", position.coords.longitude);
+          const userlat = (position.coords.latitude);
+          const userlon = (position.coords.longitude);
+          setlatitude(userlat);
+          setlongitude(userlon);
+          console.log("Geolocation obtained: Lat:", userlat, "Lon:", userlon);
 
          if (!OPENCAGE_API_KEY) {
             console.error("OpenCage API Key is not defined.");
@@ -29,12 +31,13 @@ const useGeolocation = (onLocationFound) => {
           }
 
           try {
-            const response = await fetch(`https://api.opencagedata.com/geocode/v1/json?q=${latitude}+${longitude}&key=${OPENCAGE_API_KEY}&language=en&pretty=1`);
+            const response = await fetch(`https://api.opencagedata.com/geocode/v1/json?q=${userlat}+${userlon}&key=${OPENCAGE_API_KEY}&language=en&pretty=1`);
             const data = await response.json();
 
             if (data.results && data.results.length > 0) {
               const components = data.results[0].components;
-              const city = components.city || components.town || components.village || components.county || components.state || data.results[0].formatted;
+              const city = components.city || components.town || components.village || components.county || components.state ||data.results.formatted;
+
               setlocationname(city);
               console.log("Reverse Geocoded City:", city);
               onLocationFound(city); 
@@ -45,7 +48,7 @@ const useGeolocation = (onLocationFound) => {
           } catch (error) {
             console.error("Error during reverse geocoding:", error);
             alert("Error getting location details. Please try searching manually.");
-            onLocationFound("Error Location");
+            onLocationFound("");
           } finally {
             setlocationLoading(false); 
           }

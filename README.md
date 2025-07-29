@@ -109,7 +109,7 @@ Contributions are welcome! If you have suggestions for improvements or find any 
 5. Open a Pull Request.
 
 ### License
-This project is licensed under the MIT License - see the LICENSE file (you may need to create this file in your project root) for details.
+This project is licensed under the MIT License - see the LICENSE file
 
 ### Acknowledgements
 * Air quality data insights and principles inspired by:

@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Aarogya-Vayu/static/css/main.5fe61aae.css",
-    "main.js": "/Aarogya-Vayu/static/js/main.53852156.js",
-    "static/media/aarogya-vayu-logo.jpeg": "/Aarogya-Vayu/static/media/aarogya-vayu-logo.2c606bd017fdf2185cc3.jpeg",
+    "main.css": "/Aarogya-Vayu/static/css/main.61e5f0ae.css",
+    "main.js": "/Aarogya-Vayu/static/js/main.a92e4b3d.js",
+    "static/media/aarogya-vayu-logo.png": "/Aarogya-Vayu/static/media/aarogya-vayu-logo.788fc6ce30fa9fa0b9a7.png",
     "index.html": "/Aarogya-Vayu/index.html",
-    "main.5fe61aae.css.map": "/Aarogya-Vayu/static/css/main.5fe61aae.css.map",
-    "main.53852156.js.map": "/Aarogya-Vayu/static/js/main.53852156.js.map"
+    "main.61e5f0ae.css.map": "/Aarogya-Vayu/static/css/main.61e5f0ae.css.map",
+    "main.a92e4b3d.js.map": "/Aarogya-Vayu/static/js/main.a92e4b3d.js.map"
   },
   "entrypoints": [
-    "static/css/main.5fe61aae.css",
-    "static/js/main.53852156.js"
+    "static/css/main.61e5f0ae.css",
+    "static/js/main.a92e4b3d.js"
   ]
 }
